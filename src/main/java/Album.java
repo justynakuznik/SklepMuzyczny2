@@ -10,6 +10,10 @@ public class Album {
 
    private LinkedList<Artysta> artysci;
 
+    public LinkedList<Artysta> getArtysci() {
+        return artysci;
+    }
+
     public Cena getCena() {
         return cena;
     }
@@ -42,6 +46,9 @@ public class Album {
 
     public void dodajArtyste(Artysta artysta){
         artysci.add(artysta);
+    }
+    public LinkedList<Artysta> wyswietlListeArtystow() {
+        return artysci;
     }
 
 
