@@ -44,7 +44,10 @@ public class Cena {
         this.walutaEur = walutaEur;
     }
 
-//    public void pokazCene(double cena, Waluta waluta){
+    public Cena(double cenaPln) {
+        this.cenaPln = cenaPln;
+    }
+    //    public void pokazCene(double cena, Waluta waluta){
 //        if(waluta == Waluta.PLN){
 //            System.out.println(cena + " PLN, " + cena*0.21 + " EUR");
 //

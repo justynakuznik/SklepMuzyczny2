@@ -4,7 +4,8 @@ import java.util.LinkedList;
 public class Album {
 
 
-    private Cena cena;
+    //private Cena cena;
+    private double cena;
     private Gatunek gatunek;
     private int rokWydania;
 
@@ -14,11 +15,11 @@ public class Album {
         return artysci;
     }
 
-    public Cena getCena() {
+    public double getCena() {
         return cena;
     }
 
-    public void setCena(Cena cena) {
+    public void setCena(double cena) {
         this.cena = cena;
     }
 
@@ -38,7 +39,7 @@ public class Album {
         this.rokWydania = rokWydania;
     }
 
-    public Album(Cena cena, Gatunek gatunek, int rokWydania) {
+    public Album(double cena, Gatunek gatunek, int rokWydania) {
         this.cena = cena;
         this.gatunek = gatunek;
         this.rokWydania = rokWydania;
