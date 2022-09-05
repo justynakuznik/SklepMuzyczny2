@@ -4,10 +4,12 @@ public class Sprzedawca {
 
     private int x = 1990;
     private int y = 2020;
-    private Album album;
     private SklepMuzyczny sklepMuzyczny;
 
-    /*
+    public void setSklepMuzyczny(SklepMuzyczny sklepMuzyczny) {
+        this.sklepMuzyczny = sklepMuzyczny;
+    }
+/*
     - ile jest albumów danego gatunku?
     - jaka jest średnia cena za album?
     - ile albumów wydane między rokiem x a rokiem y?
@@ -15,26 +17,19 @@ public class Sprzedawca {
 
     //LinkedList<Album> albumy = new LinkedList<Album>();
 
-    public int ileAlbumowPop(){
-        if (album.getGatunek().equals(Gatunek.POP)) {
-            sklepMuzyczny.dodajAlbum(album);
-        }
-        return sklepMuzyczny.getAlbums().size();
+
+
+    public long ileAlbumow(Gatunek gatunek){
+
+        LinkedList<Album> albums = sklepMuzyczny.getAlbums();
+        return albums.stream().filter(p -> p.getGatunek().equals(gatunek)).count();
+
+
+
     }
 
-    public int ileAlbumowRap(){
-        if (album.getGatunek().equals(Gatunek.RAP)) {
-            sklepMuzyczny.dodajAlbum(album);
-        }
-        return sklepMuzyczny.getAlbums().size();
-    }
 
-    public int ileAlbumowRock(){
-        if (album.getGatunek().equals(Gatunek.ROCK)) {
-            sklepMuzyczny.dodajAlbum(album);
-        }
-        return sklepMuzyczny.getAlbums().size();
-    }
+
 
 //    public int sredniaCenaAlbumow(Album album){
 //            albumy.add(album);
@@ -42,13 +37,13 @@ public class Sprzedawca {
 //        return albumy.get().getCena();
 //    }
 
-    public int sumaAlbumowMiedzyLatami() {
-
-        if (album.getRokWydania() <= 2020 & album.getRokWydania() >=1990) {
-            sklepMuzyczny.dodajAlbum(album);
-        }
-        return sklepMuzyczny.getAlbums().size();
-    }
+//    public int sumaAlbumowMiedzyLatami() {
+//
+//        if (album.getRokWydania() <= 2020 & album.getRokWydania() >=1990) {
+//            sklepMuzyczny.dodajAlbum(album);
+//        }
+//        return sklepMuzyczny.getAlbums().size();
+//    }
 
 
 
@@ -73,6 +68,8 @@ public class Sprzedawca {
         }
         return sum/ cena.size();
     }
+
+
 
 //    public int sumaAlbumowMiedzyLatami(Album album) {
 //
