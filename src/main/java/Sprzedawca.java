@@ -4,6 +4,8 @@ public class Sprzedawca {
 
     private int x = 1990;
     private int y = 2020;
+    private Album album;
+    private SklepMuzyczny sklepMuzyczny;
 
     /*
     - ile jest albumów danego gatunku?
@@ -11,15 +13,54 @@ public class Sprzedawca {
     - ile albumów wydane między rokiem x a rokiem y?
      */
 
-    LinkedList<Integer> albumy = new LinkedList<>();
-    public int sumaAlbumowDanegoGatunku(){
-        int sum = 0;
-        for(int i = 0; i < albumy.size(); i++)
-        {
-            sum = sum + albumy.get(i);
+    //LinkedList<Album> albumy = new LinkedList<Album>();
+
+    public int ileAlbumowPop(){
+        if (album.getGatunek().equals(Gatunek.POP)) {
+            sklepMuzyczny.dodajAlbum(album);
         }
-        return sum;
+        return sklepMuzyczny.getAlbums().size();
     }
+
+    public int ileAlbumowRap(){
+        if (album.getGatunek().equals(Gatunek.RAP)) {
+            sklepMuzyczny.dodajAlbum(album);
+        }
+        return sklepMuzyczny.getAlbums().size();
+    }
+
+    public int ileAlbumowRock(){
+        if (album.getGatunek().equals(Gatunek.ROCK)) {
+            sklepMuzyczny.dodajAlbum(album);
+        }
+        return sklepMuzyczny.getAlbums().size();
+    }
+
+//    public int sredniaCenaAlbumow(Album album){
+//            albumy.add(album);
+//            int sum = 0;
+//        return albumy.get().getCena();
+//    }
+
+    public int sumaAlbumowMiedzyLatami() {
+
+        if (album.getRokWydania() <= 2020 & album.getRokWydania() >=1990) {
+            sklepMuzyczny.dodajAlbum(album);
+        }
+        return sklepMuzyczny.getAlbums().size();
+    }
+
+
+
+
+//    public int sumaAlbumowDanegoGatunku(){
+//        int sum = 0;
+//        for(int i = 0; i < albumy.size(); i++)
+//        {
+//            sum = sum + albumy.get(i);
+//        }
+//        return sum;
+//    }
 
 
 
@@ -33,17 +74,17 @@ public class Sprzedawca {
         return sum/ cena.size();
     }
 
-    public int sumaAlbumowMiedzyLatami(Album album) {
-
-        if (album.getRokWydania() <= 2020) {
-            int sum = 0;
-            for (int i = 0; i < albumy.size(); i++) {
-                sum = sum + albumy.get(i);
-            }
-            return sum;
-        }
-        else return 0;
-    }
+//    public int sumaAlbumowMiedzyLatami(Album album) {
+//
+//        if (album.getRokWydania() <= 2020) {
+//            int sum = 0;
+//            for (int i = 0; i < albumy.size(); i++) {
+//                sum = sum + albumy.get(i);
+//            }
+//            return sum;
+//        }
+//        else return 0;
+//    }
 
 //    LinkedList<Album> albumy = new LinkedList<>();
 //
@@ -92,6 +133,11 @@ public class Sprzedawca {
 //        }
 //        else return 0;
 //    }
+
+
+
+
+
 
 
 
