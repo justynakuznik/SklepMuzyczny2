@@ -5,9 +5,11 @@ public class SklepMuzyczny {
 
     private LinkedList<Album> albumy;
 
+
     public SklepMuzyczny(LinkedList<Album> albumy) {
         this.albumy = albumy;
     }
+
 
     public void dodajAlbum(Album album){
         albumy.add(album);
@@ -22,4 +24,8 @@ public class SklepMuzyczny {
     public LinkedList<Album> getAlbums() {
         return this.albumy;
     }
+
+
+
+
 }
